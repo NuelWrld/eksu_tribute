@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #042d4b;
+    color: #ededed;
+    overflow-x: hidden;
+    caret-color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    font-size: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin: 0 18px;
+}
+
+.navbar h1:hover {
+    color: #00abf0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 18px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;    
+    font-size: 20px;
+
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:active {
+    color: #00abf0;
+}
+
+.navbar-scrolled {
+    background-color: #000000;
+}
+
+.home {
+    height: 100vh;
+    /* background: url('./image/Prof-Edward-Olanipekun.webp') no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+
+}
+
+.home-content {
+    max-width: 45%;
+    /* padding: 40px; */
+}
+.home-content-img img{
+    display: flex;
+    margin-left: 60px;
+    /*padding: 20px;
+    */background-color: #ffffff;
+    /*height: auto;
+    */border: 2px solid #005a7e;
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 0px 5px 20px #00000050;
+    /*background-image: url("./image/Prof-Edward-Olanipekun.webp");
+    */background-repeat: no-repeat;
+    background-size: cover;
+    /*width: 45%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    /*background-image: url("./image/Prof-Edward-Olanipekun.webp");
+    *//*background-size: cover;
+    background-position: center;
+    */*/:;
+    -webkit-border-radius: 25px 0px 25px 0px;
+    -moz-border-radius: 25px 0px 25px 0px;
+    -ms-border-radius: 25px 0px 25px 0px;
+    -o-border-radius: 25px 0px 25px 0px;
+}
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ededed;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00abf0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    line-height: 1.5;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:ntn-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:ntn-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:ntn-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+
+.home-sci {
+    /* position: absolute; */
+    /* bottom: 40px; */
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+    font-size: 24px;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.bio {
+    width: 100%;
+    background-color: #042d4b;
+    color: #ededed;
+    padding: 10px 10%;
+    text-align: justify;
+}
+
+.bio-content {
+    /* max-width: 1000px; */
+    display: flex;
+    margin: 0;
+    /* text-align: center; */
+    margin-top: 20px;
+}
+.content-img{
+    width: 45%;
+    margin: 0 10px;
+    border: 2px solid #005a7e;
+    border-radius: 25px 0px 0px 0px;
+    box-shadow: 0px 5px 20px #00000050;
+    background-image: url("./image/IMG-20230420-WA0017-1536x1121.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-border-radius: 25px 0px 0px 0px;
+    -moz-border-radius: 25px 0px 0px 0px;
+    -ms-border-radius: 25px 0px 0px 0px;
+    -o-border-radius: 25px 0px 0px 0px;
+}
+.content-text{
+    width: 45%;
+    margin: 0 10px;
+    border: 2px solid #005a7e;
+    padding: 5px;
+    box-shadow: 0px 5px 20px #00000050;
+    text-wrap: wrap;
+    border-radius: 0px 0px 25px 0px;
+    /* -webkit-border-radius: 0px 0px 250px 0px;
+    -moz-border-radius: 0px 0px 250px 0px;
+    -ms-border-radius: 0px 0px 250px 0px;
+    -o-border-radius: 0px 0px 250px 0px; */
+}
+.bio h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    text-align: center;
+    /* color: #00abf0; */
+}
+.content{
+    display: flex;
+    max-width: 45%;
+}
+.line {
+    height: 4px;
+    width: 90%;
+    background-color: #00abf0;
+    margin: 5px auto;
+    margin-bottom: 10px;
+}
+
+.bio-content img {
+    width: 200px;
+    height: 150px;
+}
+
+.bio-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
+}
+
+.bio-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Add a button style for the bio section */
+.bio-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00abf0;
+    color: #081b29;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.bio-btn:hover {
+    background-color: #081b29;
+    color: #ededed;
+}
+
+@media (max-width: 768px) {
+    .bio {
+        padding: 60px 10%; /* Adjust padding for smaller screens */
+    }
+
+    .bio-content {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.gallery {
+    background-color: #f4f4f4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #081b29;
+    margin-bottom: 40px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 0px 20px rgba(10, 0, 0, 0.37); 
+    border: 8px solid #ededed;
+    margin: 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.slider img:hover{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 0px 20px rgba(10, 0, 0, 0.37); 
+    border: 8px solid #ededed;
+    margin: 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+
+/* Add styles for navigation buttons */
+.prevBtn,
+.nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: #081b29;
+    cursor: pointer;
+    z-index: 2;
+    /* position: fixed; */
+}
+
+.prevBtn {
+    margin: 10px;
+    left: 20px;
+}
+
+.nextBtn {
+    margin: 10px;
+    right: 20px;
+}
+
+.feedback {
+    background-color: #081b29;
+    padding: 80px 10%;
+}
+
+.feedback-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feedback-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.feedback-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-content label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feedback-content input,
+.feedback-content textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.feedback-content textarea {
+    resize: vertical;
+}
+
+.feedback-content button {
+    padding: 12px 30px;
+    background-color: #00abf0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-content button:hover {
+    background-color: #081b29;
+}
+
+/* New styles for the feedback card */
+.feedback-card {
+    display: none;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #00abf0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00abf0;
+    margin: 0;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .home-content {
+        padding: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 18px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        margin: 10px 0 20px;
+    }
+
+    .btn-box a {
+        width: 130px;
+        font-size: 16px;
+    }
+
+    .home-sci {
+        bottom: 20px;
+        width: 150px;
+    }
+
+    .home-sci a {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .bio-content h2 {
+        font-size: 28px;
+    }
+
+    .bio-content p {
+        font-size: 16px;
+    }
+
+    .slider img {
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+    }
+
+    .prevBtn,
+    .nextBtn {
+        font-size: 20px;
+    }
+
+    .feedback-content h2 {
+        font-size: 28px;
+    }
+
+    .feedback-content label {
+        font-size: 16px;
+    }
+
+    .feedback-content input,
+    .feedback-content textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .feedback-content button {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 16px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+        margin: 8px 0 16px;
+    }
+
+    .btn-box a {
+        width: 110px;
+        font-size: 14px;
+    }
+
+    .home-sci {
+        bottom: 15px;
+        width: 130px;
+    }
+
+    .home-sci a {
+        width: 26px;
+        height: 26px;
+        font-size: 16px;
+    }
+
+    .bio-content h2 {
+        font-size: 24px;
+    }
+
+    .bio-content p {
+        font-size: 14px;
+    }
+
+    .slider img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .prevBtn,
+    .nextBtn {
+        font-size: 18px;
+    }
+
+    .feedback-content h2 {
+        font-size: 24px;
+    }
+
+    .feedback-content label {
+        font-size: 14px;
+    }
+
+    .feedback-content input,
+    .feedback-content textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .feedback-content button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}

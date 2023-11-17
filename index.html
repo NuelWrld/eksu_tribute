@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute To The V.c of Eksu</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+      <h1>Prof. Edward</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Prof. Edward Olanipekun</h1>
+            <h3>The Vice Chancellor Of Ekiti State University</h3>
+            <p>Professor Olanipekun is also a member of the Chemical Society of Nigeria and the Society of Environmental Toxicology and Chemistry.
+                In 2017, Professor Olanipekun was appointed Chairman of the Governing Council of the Federal Polytechnic of Oil and Gas in Ekowe, Bayelsa State by President Muhammadu Buhari. He still holds this position today. </p>
+                <div class="home-sci">
+                    <a href="https://m.facebook.com/edward.olanipekun/"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://ng.linkedin.com/in/edward-olanipekun-a638ba24b"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <div class="btn-box">
+                    <a href="#about">About</a>
+                    <!-- <a href="#">Contact Us</a> -->
+                </div>
+            </div>
+        <div class="home-content-img"> 
+            <img src="./image/Prof-Edward-Olanipekun.webp" alt="" height="363" width="600">
+        </div>
+    </section>
+    <section class="bio" id="about" >
+        <h2>Prof. Edward Olanipekun's Biography</h2>
+        <div class="line"></div>
+        <div class="bio-content">
+            <div class="content-img">
+                <!-- <img src="./image/IMG-20230420-WA0017-1536x1121.jpg" alt=""  align="left">   -->
+                </div>
+            <div class="content-text">
+                <p>Professor Olanipekun was born in Ado-Ekiti on March 9th, 1966 and received his primary and secondary education at St. Paul's Anglican Primary School A and Mary Immaculate Grammar School, respectively. He then went on to earn his B.Sc in Chemistry from the University of Ibadan in 1986, followed by his M.Sc in Industrial Chemistry in 1988 and Ph.D in Industrial Chemistry in 1995, also from the University of Ibadan.
+                After completing his education, Professor Olanipekun joined the faculty at Ekiti State University in October 1991.
+                Over the years, he has held a variety of positions within the university, including Dean of the School of Postgraduate Studies, Director of the Directorate of Pre-Degree Programmes, Acting Head of the Department of Chemistry, and member of the University Governing Council,
+                <!-- 
+                     Council Appeal Committee, University Central Admissions Committee, and Joint Council and Senate Selection Board for the appointment of the Vice Chancellor.
+                 In addition to his roles within the university,Professor Olanipekun is also a member of the Chemical Society of Nigeria and the Society of Environmental Toxicology and Chemistry.
+                In 2017, Professor Olanipekun was appointed Chairman of the Governing Council of the Federal Polytechnic of Oil and Gas in Ekowe, Bayelsa State by President Muhammadu Buhari. He still holds this position today. -->
+            </p></div>
+        </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <div class="container">
+          <h1>Gallery</h1>
+          <div class="slider">
+            <div class="slide">
+              <img src="./image/1.jpg" alt="">
+              <img src="./image/2.jpg" alt="">
+              <img src="./image/3.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="./image/2.jpg" alt="">
+              <img src="./image/Prof-Edward-Olanipekun.webp" alt="">
+              <img src="./image/VC-and-NUC-man1.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="./image/3.jpg" alt="">
+              <img src="./image/4.jpeg" alt="">
+              <img src="./image/5.jpg" alt="">
+            </div>
+            <div class="slide">
+              <img src="./image/4.jpeg" alt="">
+              <img src="./image/6.jpg" alt="">
+              <img src="./image/5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./image/IMG-20230420-WA0017-1536x1121.jpg" alt="">
+              <img src="./image/5.jpg" alt="">
+              <img src="./image/VC-and-NUC-man1.jpg" alt="">
+            </div>
+        </div>
+        <button class="prevBtn">&#10094;</button>
+        <button class="nextBtn">&#10095;</button>
+    </section>
+    <section class="feedback" id="contact">
+        <div class="feedback-content">
+            <h2>Feedback & Regards</h2>
+            <form action="#" method="post" onsubmit="submitFeedback(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Feedback or Regards:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+            <div id="feedbackMessage" class="feedback-card">
+                <p>Feedback Sent!</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Get the navbar element
+        const navbar = document.querySelector('.navbar');
+
+        // Function to handle the scrolling effect
+        function handleScroll() {
+            if (window.scrollY > 0) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        function submitFeedback(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            
+            // Simulate sending feedback (you can add your own logic here to handle form submission)
+            // For demonstration purposes, we'll simply show the "Feedback Sent" message after 1 second
+            setTimeout(() => {
+                document.getElementById("submitBtn").disabled = true;
+                document.getElementById("feedbackMessage").style.display = "block";
+            }, 1000);
+
+            // Reset the form after feedback is sent
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>
