@@ -527,6 +527,10 @@ h1 {
     gap: 100px;
 }
 
+.contact-content{
+    text-align: center;
+}
+
 .contact form{
     background: #fff;
     display: flex;
