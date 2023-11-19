@@ -576,11 +576,13 @@ h1 {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    
 }
 
 .contact form button:hover {
     color: #00abf0;
     background-color: #081b29;
+    
 }
 
 
