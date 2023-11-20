@@ -1,34 +1,49 @@
-const form = document.querySelector('form');
+const form = document.querySelector('.form')
 
-function sendEmail() {
-    Email.send({
-        secureToken : "72b7bd20-ac7c-4180-aa94-d548c8358a83",
-        To : 'eksudummymail@gmail.com',
-        From : "eksudummymail@gmail.com",
-        Subject : "REGARDS",
-        Body : "Name: ${document.getElementById('name').value} Email: ${document.getElementById('email').value} Regards: ${document.getElementById('message').value}"
-    }).then(
-      message => alert(message)
-    );
+function sendMessage() {
+    (function () {
+        emailjs.init("dBjEG7n6EREZQdyqs"); // Account Public key
+    })();
+
+    var serviceID = "service_ix0x5zp"; // Email Service ID
+    var templateID = "template_xmbnw1n"; // Email Template ID
+
+    var params = {
+        sendername: document.querySelector("#name").value,
+        senderemail: document.querySelector("#email").value,
+        message: document.querySelector("#message").value
+    };
+
+    emailjs.send(serviceID, templateID, params)
+    .then( res => {
+        alert('Thank you, ' + params['sendername'] + '| Your message has been sent.');
+    })
+    .catch();
+}
+
+function checkInputs() {
+    const items = document.querySelectorAll(".item");
+
+    for (const item of items) {
+        if (item.value == "") {
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+        }
+    }
+
+    item.addEventListener("keyup", () => {
+        if (item.value != "") {
+            item.classList.remove("error");
+            item.parentElement.classList.remove("error");
+        }
+        else {
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+        }
+    })
 }
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    sendEmail();
+    checkInputs();
 })
-
-        // Get the navbar element
-        const navbar = document.querySelector('.navbar');
-
-        // Function to handle the scrolling effect
-        function handleScroll() {
-            if (window.scrollY > 0) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        }
-
-        // Attach the scroll event listener
-        window.addEventListener('scroll', handleScroll);

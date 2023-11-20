@@ -22,8 +22,12 @@ body {
     padding: 20px 10%;
     position: fixed;
     width: 100%;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.4s ease-in-out;
     z-index: 1000;
+    -webkit-transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out;
+    -ms-transition: background-color 0.4s ease-in-out;
+    -o-transition: background-color 0.4s ease-in-out;
 }
 
 .navbar h1 {
@@ -62,8 +66,8 @@ body {
     color: #00abf0;
 }
 
-.navbar-scrolled {
-    background-color: black;
+.navbar.scrolled {
+    background-color: #000000;
 }
 
 .home {
@@ -531,7 +535,7 @@ h1 {
     text-align: center;
 }
 
-.contact form{
+.form{
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -545,17 +549,18 @@ h1 {
     -o-border-radius: 10px;
 }
 
-.contact form h2{
+.form h2{
     color: #081b29;
     font-weight: 800;
     margin-bottom: 18px;
 }
 
-.contact form input, form textarea{
+.form input, .form textarea{
     border: 0;
     margin: 5px 0;
     padding: 15px;
-    outline: none;
+    padding-right: 3px;
+
     background: transparent;
     border: 2px solid #0ef;
     border-radius: 6px;
@@ -566,11 +571,15 @@ h1 {
     -o-border-radius: 6px;
 }
 
-.contact form textarea{
+.form.error .item {
+    border-color: #d93025;
+}
+
+.form textarea{
     resize: none;
 }
 
-.contact form input::placeholder, form textarea::placeholder{
+.form input::placeholder, .form textarea::placeholder{
     color: rgba(19, 17, 17, 0.3);
 }
 
@@ -607,7 +616,7 @@ h1 {
     -o-transition: .5s;
 }
 
-.contact form button:hover {
+.form button:hover {
     color: #00abf0;
     background-color: #081b29;
     box-shadow: none;

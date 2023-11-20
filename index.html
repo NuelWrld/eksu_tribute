@@ -7,9 +7,10 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar" id="nav">
       <h1>LOGO</h1>
       <ul>
         <li><a href="#">Home</a></li>
@@ -123,23 +124,35 @@
             </form>
         </div> -->
         <div class="contact-content">
-            <form action="" method="post">
+            <div class="form">
                 <h2>REGARDS</h2>
-                <input type="text" id="name" class="input-area" placeholder="Your name">
+                <input type="text" id="name" class="input-area item" placeholder="Your name">
                 <div class="error-txt">Name can't be empty</div>
 
-                <input type="email" id="email" class="input-area" placeholder="Email Address">
+                <input type="email" id="email" class="input-area item" placeholder="Email Address">
                 <div class="error-txt">Email can't be empty</div>
 
-                <textarea id="message" rows="3" placeholder="Type in your regards"></textarea>
+                <textarea id="message" rows="3" placeholder="Type in your regards" class="item"></textarea>
                 <div class="error-txt">Message can't be empty</div>
 
-                <button type="submit">Send</button>
+                <button onclick="sendMessage();">Send</button>
             </form>
         </div>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+    </script> -->
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('scroll', ()=> {
+            const header = document.querySelector('nav');
+
+            if (window.scrollY > 0) {
+                header.classlist.add('scrolled');
+            } else {
+                header.classList.remove(scrolled);
+            }
+        })
+
+    </script>
 </body>
 </html>
