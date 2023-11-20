@@ -17,3 +17,18 @@ form.addEventListener("submit", (e) => {
 
     sendEmail();
 })
+
+        // Get the navbar element
+        const navbar = document.querySelector('.navbar');
+
+        // Function to handle the scrolling effect
+        function handleScroll() {
+            if (window.scrollY > 0) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
