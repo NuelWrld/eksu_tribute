@@ -2,13 +2,11 @@ const form = document.querySelector('form');
 
 function sendEmail() {
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "eksudummymail@gmail.com",
-        Password : "5F3087D06C99EF353F30CDB4907AFCD83A54",
+        secureToken : "72b7bd20-ac7c-4180-aa94-d548c8358a83",
         To : 'eksudummymail@gmail.com',
         From : "eksudummymail@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        Subject : "REGARDS",
+        Body : "Name: ${document.getElementById('name').value} Email: ${document.getElementById('email').value} Regards: ${document.getElementById('message').value}"
     }).then(
       message => alert(message)
     );
