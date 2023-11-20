@@ -11,7 +11,6 @@ body {
     background-color: #042d4b;
     color: #ededed;
     overflow-x: hidden;
-    caret-color: transparent;
 }
 
 .navbar {
@@ -559,7 +558,6 @@ h1 {
     border: 0;
     margin: 5px 0;
     padding: 15px;
-    padding-right: 3px;
 
     background: transparent;
     border: 2px solid #0ef;
@@ -571,9 +569,6 @@ h1 {
     -o-border-radius: 6px;
 }
 
-.form.error .item {
-    border-color: #d93025;
-}
 
 .form textarea{
     resize: none;

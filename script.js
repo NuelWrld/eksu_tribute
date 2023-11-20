@@ -6,7 +6,7 @@ function sendMessage() {
     })();
 
     var serviceID = "service_ix0x5zp"; // Email Service ID
-    var templateID = "template_xmbnw1n"; // Email Template ID
+    var templateID = "template_ak4raf8"; // Email Template ID
 
     var params = {
         sendername: document.querySelector("#name").value,
@@ -16,19 +16,18 @@ function sendMessage() {
 
     emailjs.send(serviceID, templateID, params)
     .then( res => {
-        message => {
-            Swal.fire({
-                title: "Good job!",
-                text: "You clicked the button!",
-                icon: "success"
-              });
-        }
+        Swal.fire({
+            title: "Success!",
+            text: "Message sent successfully!",
+            icon: "success"
+          });
     })
     .catch();
+    form.reset();
 }
 
-function checkEmail() {
-    const emailRegex = ;
+function clearForm(event) {
+    let 
 }
 
 // function checkInputs() {
