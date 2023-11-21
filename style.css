@@ -527,20 +527,24 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    
 }
 
 .contact-content{
     text-align: center;
+    display: flex;
+    gap: 100px;
 }
 
 .form{
     background: #fff;
     display: flex;
     flex-direction: column;
-    padding: 2vw 7vw;
+    padding: 2vw 10vw;
+    margin-top: 100px;
     width: 100%;
     max-width: 900px;
+    max-height: 900px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -551,6 +555,7 @@ h1 {
 .form h2{
     color: #081b29;
     font-weight: 800;
+    margin-top: 10px;
     margin-bottom: 18px;
 }
 

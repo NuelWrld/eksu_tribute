@@ -113,16 +113,20 @@
         </div>
     </section> -->
     <section class="contact">
-        <!-- <div class="contact-content">
-            <form action="" method="post">
-                <h2>CONTACT US</h2>
-                <input type="text" id="name" placeholder="Your name" required>
-                <input type="email" id="email" placeholder="Enter Your Email" required>
-                <input type="text" id="phone" placeholder="phone no." required>
-                <textarea id="message" rows="5" placeholder="How can we help you?"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div> -->
+        <div class="contact-content">
+            <div class="form">
+                <h2>Digital Signature</h2>
+
+                <div class="signature-board" id="signatureBoard">
+                    <!-- Signatures will be dynamically added here -->
+                </div>
+
+                <label for="signatureInput">Leave your mark:</label>
+                <input type="text" id="signatureInput" placeholder="Your Name">
+
+                <button class="button" onclick="addSignature()">Sign</button>
+            </div>
+        </div>
         <div class="contact-content">
             <div class="form">
                 <h2>REGARDS</h2>
