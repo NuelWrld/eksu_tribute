@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
+    background-color: #042d4b;
     padding: 20px 10%;
     position: fixed;
     width: 100%;
