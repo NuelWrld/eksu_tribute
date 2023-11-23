@@ -59,6 +59,26 @@ function clearForm(event) {
     let 
 }
 
+function addSignature() {
+  const signatureInput = document.getElementById("signatureInput");
+  const signatureBoard = document.getElementById("signatureBoard");
+  const button = document.querySelector("button");
+  const checkMark = document.createElement("div");
+  checkMark.className = "button-check";
+
+  if (signatureInput.value.trim() !== "") {
+    const signatureDiv = document.createElement("div");
+    signatureDiv.className = "signature";
+    signatureDiv.textContent = signatureInput.value;
+
+    signatureBoard.appendChild(signatureDiv);
+    signatureInput.value = ""; // Clear input after adding signature
+
+    signatureBoard.scrollTop = signatureBoard.scrollHeight;
+  }
+}
+
+
 // function checkInputs() {
 //     const items = document.querySelectorAll(".item");
 

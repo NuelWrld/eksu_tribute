@@ -446,79 +446,6 @@ h1 {
     right: 20px;
 }
 
-.feedback {
-    background-color: #081b29;
-    padding: 80px 10%;
-}
-
-.feedback-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.feedback-content h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.feedback-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-.feedback-content label {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.feedback-content input,
-.feedback-content textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.feedback-content textarea {
-    resize: vertical;
-}
-
-.feedback-content button {
-    padding: 12px 30px;
-    background-color: #00abf0;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.feedback-content button:hover {
-    background-color: #081b29;
-}
-
-/* New styles for the feedback card */
-.feedback-card {
-    display: none;
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #00abf0;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.feedback-card p {
-    font-size: 18px;
-    font-weight: 600;
-    color: #00abf0;
-    margin: 0;
-}
 
 .contact{
     width: 100%;
@@ -527,24 +454,76 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    gap: 100px;
 }
 
 .contact-content{
     text-align: center;
     display: flex;
-    gap: 100px;
 }
 
-.form{
+.signature-board {
+    font-size: medium;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 200px;
+    overflow-x: hidden;
+    margin: 20px 0;
+}
+
+.signature {
+    margin: 5px;
+    padding: 15px;
+    border: 2px solid #333;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    animation: fadeInUp 0.5s ease-in-out;
+    -webkit-animation: fadeInUp 0.5s ease-in-out;
+}
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.digi-signature {
     background: #fff;
     display: flex;
     flex-direction: column;
     padding: 2vw 10vw;
     margin-top: 100px;
     width: 100%;
-    max-width: 900px;
-    max-height: 900px;
+    max-width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color: #aaa5a5;
+  }
+
+.form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 5vw;
+    margin-top: 100px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 450px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
